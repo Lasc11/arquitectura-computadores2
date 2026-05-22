@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arquitectura de Computadoras</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#1f2937;
+line-height:1.7;
+}
+
+/* HEADER */
+header{
+background:#0f172a;
+color:white;
+padding:15px 50px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* LOGOS */
+.logos{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:10px;
+flex-wrap:wrap;
+}
+
+.logos img{
+height:55px;
+background:white;
+padding:5px;
+border-radius:8px;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(15,23,42,.8),rgba(15,23,42,.8)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h2{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:#38bdf8;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECCIONES */
+section{
+padding:70px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+}
+
+/* GRID CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARD */
+.card,.practice{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:transform 0.3s ease;
+}
+
+.card:hover,.practice:hover{
+transform:translateY(-5px);
+}
+
+.card h3,.practice h3{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+/* PRACTICAS */
+.practice-image{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:20px;
+}
+
+/* GALERIA */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+}
+
+/* FOOTER */
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h2{
+font-size:38px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="logos">
+<img src="imagenes/tecnm.png" alt="TECNM">
+<img src="imagenes/itsaltillo.png" alt="TecNM Campus Saltillo">
+</div>
+
+<nav>
+<h1>Arquitectura de Computadoras</h1>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#temario">Temario</a></li>
+<li><a href="#practicas">Prácticas</a></li>
+<li><a href="#galeria">Galería</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+<div>
+<h2>Arquitectura de Computadoras</h2>
+
+<p>
+Estudio de la organización y funcionamiento
+de los sistemas computacionales.
+</p>
+
+<a href="#temario" class="btn">Explorar Temario</a>
+</div>
+</section>
+
+<!-- TEMARIO -->
+<section id="temario">
+
+<h2 class="section-title">Temario</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Unidad 1</h3>
+<ul>
+<li>Arquitecturas de cómputo</li>
+<li>CPU</li>
+<li>ALU</li>
+<li>Memoria caché</li>
+<li>Buses</li>
+<li>DMA e interrupciones</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Unidad 2</h3>
+<ul>
+<li>Procesador</li>
+<li>Registros</li>
+<li>Fetch-Decode-Execute</li>
+<li>Segmentación</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Unidad 3</h3>
+<ul>
+<li>Chipset</li>
+<li>Puertos E/S</li>
+<li>Controladoras</li>
+<li>Fuentes de alimentación</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Unidad 4</h3>
+<ul>
+<li>Procesamiento paralelo</li>
+<li>Multiprocesadores</li>
+<li>Computación paralela</li>
+</ul>
+</div>
+
+</div>
+
+<h2 class="section-title">Temario Completo</h2>
+
+<!-- ================= UNIDAD 1 ================= -->
+
+<div class="card">
+<h3>1.1 Modelos de Arquitecturas de Cómputo</h3>
+
+<p>
+Las arquitecturas de cómputo representan la forma en que una computadora
+organiza y ejecuta sus procesos internos. Existen diferentes tipos de
+arquitecturas dependiendo de las necesidades del sistema. Las arquitecturas
+clásicas se basan en la ejecución secuencial de instrucciones utilizando
+un solo procesador. Las arquitecturas segmentadas permiten dividir tareas
+en varias etapas para mejorar la velocidad de procesamiento. Finalmente,
+las arquitecturas de multiprocesamiento utilizan varios procesadores
+trabajando simultáneamente para aumentar el rendimiento y la eficiencia
+en aplicaciones complejas.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.2 Análisis de los Componentes</h3>
+
+<p>
+El análisis de componentes permite comprender el funcionamiento interno de
+una computadora. La CPU es el componente principal encargado de procesar
+instrucciones. La Unidad Aritmética Lógica (ALU) realiza operaciones
+matemáticas y lógicas, mientras que la Unidad de Control coordina las
+operaciones del sistema. Los registros almacenan información temporal
+de alta velocidad y los buses permiten la comunicación entre los diferentes
+componentes de hardware.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.3 Memoria Principal y Caché</h3>
+
+<p>
+La memoria principal almacena programas y datos que el procesador necesita
+utilizar temporalmente. La memoria RAM permite acceso rápido a la información,
+aunque su contenido se pierde al apagar el equipo. La memoria caché es
+una memoria de alta velocidad integrada en el procesador que almacena
+datos de uso frecuente para acelerar el rendimiento del sistema.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.4 Módulos Entrada-Salida (E/S)</h3>
+
+<p>
+Los módulos de entrada y salida permiten la comunicación entre la computadora
+y los dispositivos externos como teclados, monitores, impresoras y discos.
+La E/S programada requiere intervención constante del procesador, mientras
+que la E/S mediante interrupciones permite al procesador realizar otras
+tareas mientras espera la transferencia de datos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.5 Acceso Directo a Memoria (DMA)</h3>
+
+<p>
+El Acceso Directo a Memoria o DMA permite transferir datos entre dispositivos
+y memoria principal sin intervención constante del procesador. Esto mejora
+el rendimiento del sistema y reduce la carga de trabajo de la CPU,
+especialmente en operaciones de gran volumen de datos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.6 Buses</h3>
+
+<p>
+Los buses son canales de comunicación utilizados para transferir datos,
+direcciones e instrucciones entre los componentes de la computadora.
+Existen buses de datos, de direcciones y de control. La estructura y
+jerarquía de buses influye directamente en la velocidad y eficiencia
+del sistema computacional.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>1.7 Interrupciones</h3>
+
+<p>
+Las interrupciones son señales que indican al procesador que debe atender
+un evento importante. Permiten suspender temporalmente la ejecución de
+un programa para atender tareas prioritarias, como operaciones de entrada
+y salida o errores del sistema.
+</p>
+
+</div>
+
+<!-- ================= UNIDAD 2 ================= -->
+
+<div class="card">
+
+<h3>2.1 Organización del Procesador</h3>
+
+<p>
+La organización del procesador define cómo se distribuyen y coordinan
+sus componentes internos. El procesador está compuesto por registros,
+ALU, unidad de control y buses internos que permiten ejecutar instrucciones
+y procesar datos de manera eficiente.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.2 Estructura de Registros</h3>
+
+<p>
+Los registros son pequeñas memorias de alta velocidad dentro del procesador.
+Los registros visibles al usuario almacenan datos y direcciones utilizadas
+por programas. Los registros de control coordinan operaciones internas y
+los registros de estado guardan información sobre resultados y condiciones
+del procesador.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.3 Ciclo de la Instrucción</h3>
+
+<p>
+El ciclo de instrucción es el proceso mediante el cual el procesador ejecuta
+instrucciones. Incluye las etapas Fetch, Decode y Execute. En Fetch se
+obtiene la instrucción desde memoria, en Decode se interpreta y en Execute
+se realiza la operación correspondiente.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.3.1 Ciclo Fetch-Decode</h3>
+
+<p>
+El ciclo Fetch-Decode es fundamental para la ejecución de programas.
+El procesador obtiene instrucciones desde memoria y posteriormente las
+decodifica para determinar la operación que debe ejecutarse y los recursos
+que utilizará.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.3.2 Segmentación - Ejecución</h3>
+
+<p>
+La segmentación divide la ejecución de instrucciones en etapas separadas.
+Esto permite procesar múltiples instrucciones simultáneamente, aumentando
+el rendimiento del procesador mediante técnicas de pipeline.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.3.3 Conjunto de Instrucciones</h3>
+
+<p>
+El conjunto de instrucciones define las operaciones que puede realizar un
+procesador. Incluye instrucciones aritméticas, lógicas, de transferencia
+de datos y control. Arquitecturas como RISC y CISC utilizan diferentes
+enfoques para optimizar el rendimiento.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.4 Modos de Direccionamiento</h3>
+
+<p>
+Los modos de direccionamiento determinan la forma en que el procesador
+localiza datos en memoria. Existen modos inmediatos, directos, indirectos,
+indexados y relativos, cada uno diseñado para optimizar diferentes tipos
+de operaciones.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>2.5 Casos de Estudio</h3>
+
+<p>
+Los casos de estudio permiten analizar arquitecturas y procesadores reales,
+comprendiendo cómo se aplican los conceptos teóricos en sistemas modernos
+de computación utilizados en servidores, computadoras personales y centros
+de datos.
+</p>
+
+</div>
+
+<!-- ================= UNIDAD 3 ================= -->
+
+<div class="card">
+
+<h3>3.1 Chipset</h3>
+
+<p>
+El chipset coordina la comunicación entre procesador, memoria y dispositivos
+de entrada/salida. Se divide generalmente en puente norte y puente sur,
+encargados de administrar diferentes funciones del sistema.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.1 Unidad Central de Procesamiento (CPU)</h3>
+
+<p>
+La CPU es el componente principal encargado de ejecutar instrucciones y
+procesar información. Su velocidad y capacidad determinan gran parte del
+rendimiento general de la computadora.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.2 Controlador del Bus</h3>
+
+<p>
+El controlador del bus administra la transferencia de información entre
+los diferentes dispositivos conectados al sistema, garantizando comunicación
+eficiente y sincronizada.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.3 Puertos de Entrada/Salida</h3>
+
+<p>
+Los puertos E/S permiten conectar dispositivos externos como teclados,
+ratones, impresoras y memorias USB. Facilitan la transferencia de datos
+entre el usuario y la computadora.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.4 Controlador de Interrupciones</h3>
+
+<p>
+El controlador de interrupciones administra las señales generadas por
+dispositivos externos, permitiendo al procesador atender eventos prioritarios
+sin afectar el rendimiento general.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.5 Controlador DMA</h3>
+
+<p>
+El controlador DMA permite realizar transferencias directas de datos
+entre dispositivos y memoria principal sin intervención constante del
+procesador, optimizando el rendimiento del sistema.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.6 Circuitos de Temporización</h3>
+
+<p>
+Los circuitos de temporización generan señales de reloj necesarias para
+sincronizar las operaciones internas de la computadora y coordinar la
+ejecución de instrucciones.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.7 Circuitos de Control</h3>
+
+<p>
+Los circuitos de control regulan y supervisan las operaciones del sistema,
+asegurando que cada componente funcione correctamente y de forma coordinada.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.1.8 Controladoras de Video</h3>
+
+<p>
+Las controladoras de video procesan gráficos e imágenes que serán mostradas
+en el monitor. Son esenciales para aplicaciones multimedia, videojuegos
+y diseño gráfico.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.2 Aplicaciones</h3>
+
+<p>
+Las aplicaciones del hardware incluyen sistemas de entrada/salida,
+almacenamiento de datos y fuentes de alimentación utilizadas en equipos
+modernos de cómputo.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>3.3 Ambientes de Servicio</h3>
+
+<p>
+Los ambientes de servicio representan los distintos contextos donde se
+utilizan sistemas computacionales, como negocios, industria y comercio
+electrónico, adaptándose a necesidades específicas.
+</p>
+
+</div>
+
+<!-- ================= UNIDAD 4 ================= -->
+
+<div class="card">
+
+<h3>4.1 Aspectos Básicos de la Computación Paralela</h3>
+
+<p>
+La computación paralela permite ejecutar múltiples tareas simultáneamente
+utilizando varios procesadores o núcleos, aumentando considerablemente
+el rendimiento del sistema.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.2 Tipos de Computación Paralela</h3>
+
+<p>
+Existen diferentes tipos de computación paralela dependiendo de la forma
+en que los procesadores comparten memoria y tareas. Estas arquitecturas
+permiten resolver problemas complejos de forma más rápida.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.2.1 Clasificación</h3>
+
+<p>
+La clasificación de arquitecturas paralelas incluye sistemas SIMD, MIMD
+y multiprocesadores, cada uno diseñado para diferentes necesidades de
+procesamiento y rendimiento.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.2.2 Arquitectura de Computadoras Secuenciales</h3>
+
+<p>
+Las computadoras secuenciales ejecutan instrucciones una tras otra utilizando
+un solo flujo de procesamiento. Son utilizadas en sistemas simples y de
+bajo costo.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.2.3 Organización de Memoria</h3>
+
+<p>
+La organización de memoria en sistemas paralelos puede ser compartida o
+distribuida, dependiendo de cómo los procesadores acceden y almacenan
+información.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.3 Sistemas de Memoria Compartida</h3>
+
+<p>
+Los sistemas de memoria compartida permiten que varios procesadores accedan
+a la misma memoria principal, facilitando el intercambio de datos y la
+coordinación de tareas.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.3.1 Redes de Interconexión Dinámica</h3>
+
+<p>
+Las redes de interconexión dinámica permiten la comunicación flexible entre
+procesadores y memorias mediante switches y conexiones configurables.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.4 Sistemas de Memoria Distribuida</h3>
+
+<p>
+En los sistemas de memoria distribuida cada procesador posee su propia
+memoria local y se comunica con otros mediante redes de interconexión.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.4.1 Redes de Interconexión Estática</h3>
+
+<p>
+Las redes estáticas utilizan conexiones fijas entre procesadores y memorias,
+proporcionando estabilidad y rendimiento constante.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>4.5 Casos para Estudio</h3>
+
+<p>
+Los casos de estudio permiten analizar aplicaciones reales de computación
+paralela en inteligencia artificial, simulaciones científicas y procesamiento
+masivo de datos.
+</p>
+
+</div>
+
+</section>
+
+<!-- PRÁCTICAS -->
+
+
+<section id="practicas">
+
+  <h2 class="section-title">
+    Prácticas de Laboratorio
+  </h2>
+
+  <div class="practice">
+
+    <img class="practice-image"
+    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+    alt="Hardware">
+
+    <h3>Práctica 1 - Componentes de Computadora</h3>
+
+    <p>
+      Investigación y análisis de componentes de hardware
+      utilizados en equipos de cómputo.
+    </p>
+
+    <ul>
+      <li>AMD Sempron 140</li>
+      <li>Memoria ADATA DDR2</li>
+      <li>Disco duro Western Digital</li>
+      <li>Fuente de poder Edge Systems</li>
+    </ul>
+
+    <a class="btn" href="pdfs/practica1.pdf" target="_blank">
+      Ver PDF de la Práctica
+    </a>
+
+  </div>
+
+  <div class="practice">
+
+    <img class="practice-image"
+    src="https://images.unsplash.com/photo-1591799265444-d66432b91588?q=80&w=1200&auto=format&fit=crop"
+    alt="Procesadores">
+
+    <h3>Práctica 2 - Procesadores AMD e Intel</h3>
+
+    <p>
+      Comparación entre procesadores AMD Ryzen
+      e Intel Core.
+    </p>
+
+    <ul>
+      <li>Ryzen 5 / Ryzen 7 / Ryzen 9</li>
+      <li>Threadripper</li>
+      <li>Intel Core i3 / i5 / i7 / i9</li>
+    </ul>
+
+    <a class="btn" href="pdfs/practica2.pdf" target="_blank">
+      Ver PDF de la Práctica
+    </a>
+
+  </div>
+
+  <div class="practice">
+
+    <img class="practice-image"
+    src="https://images.unsplash.com/photo-1562976540-1502c2145186?q=80&w=1200&auto=format&fit=crop"
+    alt="RAM">
+
+    <h3>Práctica 3 - Memorias RAM</h3>
+
+    <p>
+      Investigación sobre tecnologías DDR3,
+      DDR4, DDR5 y SRAM.
+    </p>
+
+    <ul>
+      <li>Kingston DDR4</li>
+      <li>Samsung DDR4</li>
+      <li>HyperX Fury DDR3</li>
+      <li>DDR5</li>
+    </ul>
+
+    <a class="btn" href="pdfs/practica3.pdf" target="_blank">
+      Ver PDF de la Práctica
+    </a>
+
+  </div>
+
+  <div class="practice">
+
+    <img class="practice-image"
+    src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=1200&auto=format&fit=crop"
+    alt="Armado PC">
+
+    <h3>Práctica 4 - Armado y Desarmado de PC</h3>
+
+    <p>
+      Procedimiento de desmontaje y ensamblaje
+      de una computadora de escritorio.
+    </p>
+
+    <ul>
+      <li>Retiro del disipador</li>
+      <li>Extracción RAM</li>
+      <li>Desmontaje SSD</li>
+      <li>Fuente de poder</li>
+      <li>Ensamblaje final</li>
+    </ul>
+
+    <a class="btn" href="pdfs/practica4.pdf" target="_blank">
+      Ver PDF de la Práctica
+    </a>
+
+  </div>
+
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+
+<h2 class="section-title">Galería de Prácticas</h2>
+
+<div class="gallery">
+<img src="imagenes/Imagen1.jpg">
+<img src="imagenes/Imagen2.jpg">
+<img src="imagenes/Imagen3.jpg">
+<img src="imagenes/Imagen4.jpg">
+<img src="imagenes/Imagen5.jpg">
+<img src="imagenes/Imagen6.jpg">
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h3>Instituto Tecnológico de Saltillo</h3>
+<p>Ingeniería en Sistemas Computacionales</p>
+<p>Arquitectura de Computadoras</p>
+<p>Luis Abisai Sanchez Cirilo</p>
+</footer>
+
+</body>
+</html>
